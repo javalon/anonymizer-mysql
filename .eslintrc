@@ -1,0 +1,14 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": 0
+  },
+  "extends": [
+    "eslint:recommended"
+  ]
+}
