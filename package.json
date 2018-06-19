@@ -1,10 +1,15 @@
 {
-  "name": "anonymizer-mysql",
-  "version": "0.1.0",
+  "name": "@brooktec/anonymizer-mysql",
+  "version": "1.0.0",
   "description": "This simple tool will allow you to make anonymized clone of your database.",
   "engines": {
     "node": ">=8.11.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javalon/anonymizer-mysql.git"
+  },
+  "license": "MIT",
   "main": "./lib/anonymizer-mysql.js",
   "bin": {
     "anonymizer-mysql": "./bin/anonymizer-mysql.js"
