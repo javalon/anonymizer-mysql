@@ -1,5 +1,5 @@
 {
-  "name": "@brooktec/anonymizer-mysql",
+  "name": "anonymizer-mysql",
   "version": "1.0.0",
   "description": "This simple tool will allow you to make anonymized clone of your database.",
   "engines": {
