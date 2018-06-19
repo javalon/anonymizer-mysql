@@ -30,6 +30,6 @@ commander
 
 commander.parse(argv);
 
-var conf_fileValue = commander.conf || __dirname + "/config.json";
+var conf_fileValue = commander.conf || process.cwd() + "/config.json";
 
 anonymizer.run(conf_fileValue, commander);
