@@ -15,20 +15,20 @@ if (typeof JSON.clone !== "function") {
   };
 }
 
-commander.version(version).on("command:*", () => {
+commander
+  .version(version)
+  .option("-f, --force", "Overwrite the clone db if it already exists.")
+  .option("-c, --conf <file>", "Config file. Default: config.json")
+  .option("-d, --dump <file>", "Path to mysqldump. Default: system mysqldump.")
+  .option("-m, --mysql <file>", "Path to mysql. Default: system mysql.")
+  .parse(argv);
+
+commander.on("command:*", () => {
   error(
     `Invalid command: ${commander.args.join(" ")}\nSee --help for a list of available commands.`
   );
   exit(1);
 });
-
-commander
-  .option("-f, --force", "Overwrite the clone db if it already exists.")
-  .option("-c, --conf <file>", "Config file. Default: config.json")
-  .option("-d, --dump <file>", "Path to mysqldump. Default: system mysqldump.")
-  .option("-m, --mysql <file>", "Path to mysql. Default: system mysql.");
-
-commander.parse(argv);
 
 var conf_fileValue = commander.conf || process.cwd() + "/config.json";
 
