@@ -88,6 +88,28 @@ You need to create a config(.json) file like this:
         }
       ],
       "where": "rolId = 1"
+    },
+    {
+      "table": "users",
+      "insertIgnore": true,
+      "fields": [
+        {
+          "field": "username",
+          "apply": "'johndoe'"
+        },
+        {
+          "field": "surname",
+          "apply": "'Doe'"
+        },
+        {
+          "field": "password",
+          "apply": "'3452343452AFF'"
+        },
+        {
+          "field": "name",
+          "apply": "'John'"
+        }
+      ]
     }
   ]
 }
@@ -102,6 +124,8 @@ The "apply" JSON attribute indicates the MySQL function to execute, here your an
 For conditional queries use the JSON attribute "where".
 
 You can create many conditional queries for the same table. See the example.
+
+You can use "insertIgnore" as attribute and set it true if you want do a "INSERT IGNORE' instead of "UPDATE" query,
 
 Once you has been created a config(.json) file, you can use this tool with:
 Usage: anonymizer-mysql [options]
