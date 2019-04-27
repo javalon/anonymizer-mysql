@@ -20,6 +20,7 @@ commander
   .option("-f, --force", "Overwrite the clone db if it already exists.")
   .option("-c, --conf <file>", "Config file. Default: config.json")
   .option("-d, --dump <file>", "Path to mysqldump. Default: system mysqldump.")
+  .option("-8, --dumpv8", "If you use MySQL v8.x dump. (--column-statistics=0)")
   .option("-m, --mysql <file>", "Path to mysql. Default: system mysql.")
   .parse(argv);
 

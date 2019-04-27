@@ -1,6 +1,6 @@
 {
   "name": "anonymizer-mysql",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This simple tool will allow you to make anonymized clone of your database.",
   "engines": {
     "node": ">=8.11.2"

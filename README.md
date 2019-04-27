@@ -136,5 +136,6 @@ Options:
     -f, --force         Overwrite the clone db if it already exists.
     -c, --conf <file>   Config file. Default: config.json
     -d, --dump <file>   Path to mysqldump. Default: system mysqldump.
+    -8, --dumpv8        If you use MySQL v8.x dump. (--column-statistics=0)
     -m, --mysql <file>  Path to mysql. Default: system mysql.
     -h, --help          output usage information
